@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Form from './components/Form';
+import ItemsList from './components/ItemsList';
 
 function App() {
+  const [inputText, setInputText] = useState("");
+  const [inputNum, setInputNum] = useState("");
+  const [items, setItems] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Currency converter</h1>
       </header>
+      <Form 
+        inputText={inputText} 
+        inputNum={inputNum} 
+        items={items} 
+        setItems={setItems} 
+        setInputText={setInputText} 
+        setInputNum={setInputNum}
+      />
+      <ItemsList setItems={setItems} items={items} />
     </div>
   );
 }

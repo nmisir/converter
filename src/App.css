@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  body {
+    background-image: linear-gradient(120deg, #7083f1 0%, #fda085 100%);
+    color: rgb(233, 231, 207);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+  header {
+    font-size: 2rem;
   }
-}
+  
+  header,
+  form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form input,
+  form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+    margin: 2px;
+  }
+  form button {
+    color: #a58c1a;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form button:hover {
+    background: #48656e;
+    color: white;
+  }
+  .item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item-list {
+    min-width: 35%;
+    list-style:none;
+  }
+  
+  .items {
+    margin: 0.5rem;
+    background: white;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+  }
+  .items li {
+    flex: 1;
+  }
+  
+  .trash-btn{
+    background: #375391;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .item {
+    padding: 0rem 0.5rem;
+  }
